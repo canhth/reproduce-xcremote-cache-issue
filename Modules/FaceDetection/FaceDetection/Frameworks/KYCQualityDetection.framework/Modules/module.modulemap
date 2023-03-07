@@ -1,0 +1,6 @@
+framework module KYCQualityDetection {
+  umbrella header "GojekCV.h"
+
+  export *
+  module * { export * }
+}

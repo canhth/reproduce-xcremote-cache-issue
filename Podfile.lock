@@ -1,0 +1,44 @@
+PODS:
+  - FaceDetection (0.1.0):
+    - PromiseKit
+    - SwiftMessages
+  - PromiseKit (6.18.1):
+    - PromiseKit/CorePromise (= 6.18.1)
+    - PromiseKit/Foundation (= 6.18.1)
+    - PromiseKit/UIKit (= 6.18.1)
+  - PromiseKit/CorePromise (6.18.1)
+  - PromiseKit/Foundation (6.18.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.18.1):
+    - PromiseKit/CorePromise
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
+
+DEPENDENCIES:
+  - FaceDetection (from `Modules/FaceDetection/`)
+  - PromiseKit
+  - SwiftyRSA
+
+SPEC REPOS:
+  trunk:
+    - PromiseKit
+    - SwiftMessages
+    - SwiftyRSA
+
+EXTERNAL SOURCES:
+  FaceDetection:
+    :path: Modules/FaceDetection/
+
+SPEC CHECKSUMS:
+  FaceDetection: 19c882c3143be78dfb3d3abe9be73348d897d654
+  PromiseKit: 49d70c53d5d20e346beaea4b276b5dd2ab446bb4
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+
+PODFILE CHECKSUM: d729c94d0aeed10253ec9367d3183489dbf80dbb
+
+COCOAPODS: 1.11.3

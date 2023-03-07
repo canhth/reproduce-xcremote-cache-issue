@@ -1,0 +1,31 @@
+/* 
+  MGFaceDetection.strings
+  MegLiveDemo
+
+  Created by Megvii on 2017/5/26.
+  Copyright © 2017Year megvii. All rights reserved.
+*/
+
+"face_check_error1" = "Hold your phone vertically";
+"face_check_error2" = "Can't detect your face";
+"face_check_error3" = "Can't detect your face";
+"face_check_error4" = "Can't detect your face";
+"face_check_error5" = "Not enough light intensity";
+"face_check_error6" = "Too strong light intensity";
+"face_check_error7" = "Too far from camera";
+"face_check_error8" = "Too close to camera";
+"face_check_error9" = "Please avoid side light or backlight";
+"face_check_error10" = "Place the face in well-focus, please";
+"face_check_error11" = "Hold the pose";
+"face_check_error12" = "Don't block your eyes";
+"face_check_error13" = "Don't block your mouth";
+
+"face_check_title" = "Complete";
+"face_check_title1" = "Place the face in well-focus";
+"face_check_title2" = "Keep the pose";
+"face_check_title3" = "Detection Completed";
+
+"face_check_eye" = "Blink your eyes, please";
+"face_check_mouse" = "Open your mouth, please";
+"face_check_header_3" = "Shake your head, please";
+"face_check_header_1" = "Nod your head, please";
