@@ -205,7 +205,7 @@
 				369CED042832E5A6003BA68D /* Resources */,
 				DE9CD589F50C31F8CF0B58D7 /* [CP] Copy Pods Resources */,
 				CEDBCC3829B5E65400D54792 /* Embed Watch Content */,
-				F2868AB39CE83CB28C1B5CD6 /* [XCRC] Mark */,
+				95C0642403475F3DAA29EA5D /* [XCRC] Mark */,
 			);
 			buildRules = (
 			);
@@ -296,28 +296,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C9D634F03FC7E8507B7AB80 /* [XCRC] Prebuild WatchCache Watch App */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$SRCROOT/XCRC/xcprebuild",
-			);
-			name = "[XCRC] Prebuild WatchCache Watch App";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(TARGET_TEMP_DIR)/rc.enabled",
-				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
 		355827BA3C6847B3832C6276 /* [XCRC] Postbuild WatchCache Watch App */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,7 +318,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
 		};
-		399DC289A3D5165F1FF79E5C /* [XCRC] Prebuild Proj */ = {
+		4F9505111547749B7963BFDC /* [XCRC] Prebuild WatchCache Watch App */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
@@ -351,7 +329,7 @@
 			inputPaths = (
 				"$SRCROOT/XCRC/xcprebuild",
 			);
-			name = "[XCRC] Prebuild Proj";
+			name = "[XCRC] Prebuild WatchCache Watch App";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -384,6 +362,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		95C0642403475F3DAA29EA5D /* [XCRC] Mark */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$SRCROOT/XCRC/xcprepare",
+			);
+			name = "[XCRC] Mark";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\" mark --configuration \"$CONFIGURATION\" --platform $PLATFORM_NAME";
+		};
 		A44C04C769584641CA76D12C /* [XCRC] Postbuild Proj */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +398,28 @@
 			outputPaths = (
 				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(XCRC_PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
 				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(XCRC_PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
+		};
+		B6E040E2D98343B185E08B93 /* [XCRC] Prebuild Proj */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$SRCROOT/XCRC/xcprebuild",
+			);
+			name = "[XCRC] Prebuild Proj";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_TEMP_DIR)/rc.enabled",
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,25 +463,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Proj/Pods-Proj-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		F2868AB39CE83CB28C1B5CD6 /* [XCRC] Mark */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$SRCROOT/XCRC/xcprepare",
-			);
-			name = "[XCRC] Mark";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\" mark --configuration \"$CONFIGURATION\" --platform $PLATFORM_NAME";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -765,7 +765,7 @@
 				SWIFT_USE_INTEGRATED_DRIVER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 				XCRC_COOCAPODS_ROOT = "$SRCROOT/";
 				XCRC_PLATFORM_PREFERRED_ARCH = "$(LINK_FILE_LIST_$(CURRENT_VARIANT)_$(PLATFORM_PREFERRED_ARCH):dir:standardizepath:file:default=arm64)";
 				XCREMOTE_CACHE_FAKE_SRCROOT = /xxxxxxxxxx;
@@ -811,7 +811,7 @@
 				SWIFT_USE_INTEGRATED_DRIVER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 				XCRC_COOCAPODS_ROOT = "$SRCROOT/";
 				XCRC_PLATFORM_PREFERRED_ARCH = "$(LINK_FILE_LIST_$(CURRENT_VARIANT)_$(PLATFORM_PREFERRED_ARCH):dir:standardizepath:file:default=arm64)";
 				XCREMOTE_CACHE_FAKE_SRCROOT = /xxxxxxxxxx;

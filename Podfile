@@ -30,7 +30,7 @@ end
 
 target 'WatchCache Watch App' do
   # Comment the next line if you don't want to use dynamic frameworks
-  platform :watchos, '6.0'
+  platform :watchos, '7.0'
   pod 'PromiseKit'
   pod 'SwiftyRSA'
   pod 'Alamofire'
@@ -53,6 +53,7 @@ installer.pod_target_subprojects.flat_map(&:targets).each do |target|
     config.build_settings['GCC_OPTIMIZATION_LEVEL'] = '0'
     config.build_settings['ENABLE_TESTABILITY'] = 'YES'
     config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -ObjC'
   end
 end
 end
