@@ -8,10 +8,10 @@ use_frameworks! :linkage => :static
 install! 'cocoapods', :generate_multiple_pod_projects => true
 
 xcremotecache({
-    'cache_addresses' => ['https://my-cached-domain/cache/demo/'],
-    'primary_repo' => 'git@github.com:canhth/demo-xcremote-cache.git',
+    'cache_addresses' => ['https://xc-remote-cache.toolsfdg.net/cache/demo/xcremotecache/'],
+    'primary_repo' => 'git@github.com:canhth/reproduce-xcremote-cache-issue.git',
     'mode' => 'producer',
-    'primary_branch' => 'master',
+    'primary_branch' => 'main',
     'check_build_configuration' => 'Debug',
     'check_platform' => 'iphonesimulator',
     'prettify_meta_files' => true,
@@ -23,6 +23,8 @@ xcremotecache({
 target 'Proj' do
   pod 'FaceDetection', :path => 'Modules/FaceDetection/'
   pod 'SwiftyRSA'
+  pod 'Alamofire'
+  pod 'Arcane'
 
 end
 
@@ -31,6 +33,8 @@ target 'WatchCache Watch App' do
   platform :watchos, '6.0'
   pod 'PromiseKit'
   pod 'SwiftyRSA'
+  pod 'Alamofire'
+  pod 'Arcane'
 end
 
 post_install do |installer|

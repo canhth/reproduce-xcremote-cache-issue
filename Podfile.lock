@@ -1,4 +1,6 @@
 PODS:
+  - Alamofire (5.6.4)
+  - Arcane (2.1)
   - FaceDetection (0.1.0):
     - PromiseKit
     - SwiftMessages
@@ -19,12 +21,16 @@ PODS:
   - SwiftyRSA/ObjC (1.7.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - Arcane
   - FaceDetection (from `Modules/FaceDetection/`)
   - PromiseKit
   - SwiftyRSA
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Arcane
     - PromiseKit
     - SwiftMessages
     - SwiftyRSA
@@ -34,11 +40,13 @@ EXTERNAL SOURCES:
     :path: Modules/FaceDetection/
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Arcane: 3a2e2f773a112911693ad4dcf4bec4293fac63e7
   FaceDetection: 19c882c3143be78dfb3d3abe9be73348d897d654
   PromiseKit: 49d70c53d5d20e346beaea4b276b5dd2ab446bb4
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
 
-PODFILE CHECKSUM: d729c94d0aeed10253ec9367d3183489dbf80dbb
+PODFILE CHECKSUM: 5b900fbee26b59644c9ca8e9d94c907a6d9dc896
 
 COCOAPODS: 1.11.3
