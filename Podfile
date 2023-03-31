@@ -8,9 +8,9 @@ use_frameworks! :linkage => :static
 install! 'cocoapods', :generate_multiple_pod_projects => true
 
 xcremotecache({
-    'cache_addresses' => ['https://xc-remote-cache.toolsfdg.net/cache/demo/xcremotecache4/'],
+    'cache_addresses' => ['http://localhost:8080/cache'],
     'primary_repo' => 'git@github.com:canhth/reproduce-xcremote-cache-issue.git',
-    'mode' => 'consumer',
+    'mode' => 'producer',
     'primary_branch' => 'main',
     'check_build_configuration' => 'Debug',
     'check_platform' => 'iphonesimulator',
