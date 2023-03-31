@@ -29,12 +29,12 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
-  s.static_framework = true
+  s.watchos.deployment_target = '6.0'
+  # s.static_framework = true
   s.source_files = 'name1/Classes/**/*'
-  s.exclude_files = 'name1/Classes/Core/**/*'
-  s.ios.dependency 'name2'
-  s.ios.dependency 'FaceDetection'
-  
+
+  s.dependency 'Alamofire'
+
   # s.resource_bundles = {
   #   'name1' => ['name1/Assets/*.png']
   # }

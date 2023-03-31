@@ -1,9 +1,14 @@
-import FaceDetection
+import Alamofire
 
-import KYCQualityDetection
+open class NameName: NSObject {
 
-import name2
+}
 
-open class NameName: TestingName {
-    
+open class NameName2: NSObject {
+
+}
+
+
+open class NameName3: NSObject {
+
 }

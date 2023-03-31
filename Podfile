@@ -8,9 +8,9 @@ use_frameworks! :linkage => :static
 install! 'cocoapods', :generate_multiple_pod_projects => true
 
 xcremotecache({
-    'cache_addresses' => ['https://xc-remote-cache.toolsfdg.net/cache/demo/xcremotecache/'],
+    'cache_addresses' => ['https://xc-remote-cache.toolsfdg.net/cache/demo/xcremotecache4/'],
     'primary_repo' => 'git@github.com:canhth/reproduce-xcremote-cache-issue.git',
-    'mode' => 'producer',
+    'mode' => 'consumer',
     'primary_branch' => 'main',
     'check_build_configuration' => 'Debug',
     'check_platform' => 'iphonesimulator',
@@ -25,6 +25,7 @@ target 'Proj' do
   pod 'SwiftyRSA'
   pod 'Alamofire'
   pod 'Arcane'
+  pod 'name1', :path => './Modules/name1'
 
 end
 
@@ -35,6 +36,7 @@ target 'WatchCache Watch App' do
   pod 'SwiftyRSA'
   pod 'Alamofire'
   pod 'Arcane'
+  pod 'name1', :path => './Modules/name1'
 end
 
 post_install do |installer|
@@ -53,7 +55,7 @@ installer.pod_target_subprojects.flat_map(&:targets).each do |target|
     config.build_settings['GCC_OPTIMIZATION_LEVEL'] = '0'
     config.build_settings['ENABLE_TESTABILITY'] = 'YES'
     config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-    config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -ObjC'
+   config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -ObjC'
   end
 end
 end
